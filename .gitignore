@@ -1,0 +1,9 @@
+.*
+!/.gitignore
+.idea/
+.metadata/
+output/
+interface/projects/img-comp-resemblejs/app/output/images/diff_images/*.png
+interface/projects/img-comp-resemblejs/app/output/images/test_images/*.png
+interface/projects/img-comp-resemblejs/app/output/*.html
+interface/projects/img-comp-resemblejs/node_modules

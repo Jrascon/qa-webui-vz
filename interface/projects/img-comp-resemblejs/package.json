@@ -1,0 +1,14 @@
+{
+  "name": "test-resemblejs",
+  "version": "1.0.0",
+  "description": "Test project to use ResembleJS built for node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Lee",
+  "license": "ISC",
+  "dependencies": {
+    "node-resemble-js": "^0.2.0"
+  }
+}
