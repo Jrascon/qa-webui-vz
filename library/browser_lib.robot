@@ -35,15 +35,8 @@ Open browser to fullscreen viewport size     [Arguments]     ${url}
     maximize browser window
     Close email newsletter popup
 
-Scroll to vertical coordinate       [Arguments]    ${y}
-
-    [Documentation]     Executes javascript to scroll the page to the specified y-coordinate.
-    execute javascript      window.scrollTo(0,${y})
-
-Scroll to horizontal coordinate       [Arguments]     ${x}
-    [Documentation]     Executes javascript to scroll the page to the specified x-coordinate.
-    execute javascript      window.scrollTo(${x},0)
-
-Scroll to x and y coordinates       [Arguments]     ${x}    ${y}
-    [Documentation]     Executes javascript to scroll the page to the specified x and y coordinates.
-    execute javascript      window.scrollTo(${x},${y})
+Open browser to default viewport size     [Arguments]     ${url}
+    [Documentation]     Opens the browser to a predefined laptop size.
+    ...                 Size variables are set in resources/var_declarations.robot.
+    open browser        ${url}
+    Close email newsletter popup
