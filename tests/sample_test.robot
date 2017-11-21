@@ -2,6 +2,7 @@
 Documentation     An example test case.
 
 Resource    ../library/browser_lib.robot
+Resource    ../library/util_lib.robot
 Resource    ../library/vz_landing_lib.robot
 
 *** Variables ***

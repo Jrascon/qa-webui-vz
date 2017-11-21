@@ -2,6 +2,7 @@
 Documentation     An example test case.
 Test Template   Take screenshot of some layout item
 Resource    ../library/browser_lib.robot
+Resource    ../library/util_lib.robot
 Resource    ../library/vz_landing_lib.robot
 Resource    ../interface/img_comp_interface.robot
 
@@ -18,7 +19,7 @@ Capture Test Layout         ${URL_STAGE}            ${Y_COORD}
 *** Keywords ***
 Take screenshot of some layout item
     [Arguments]     ${url}     ${y_coordinate}
-    Open browser to mobile viewport size     ${url}
+    Open browser to default viewport size     ${url}
     sleep   2
     Scroll to vertical coordinate       ${y_coordinate}
     run keyword if          '${url}' == '${URL_LIVE}'       Take baseline comparison screenshot for resembleJS     ${IMG1}
