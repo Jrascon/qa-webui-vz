@@ -9,3 +9,4 @@ Library             Screenshot
 Resource            ../resources/var_declarations.robot
 Resource            ../resources/element_locators.robot
 Resource            ../resources/js_snippets.robot
+Resource            ../interface/img_comp_interface.robot
