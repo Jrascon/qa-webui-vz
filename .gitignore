@@ -1,6 +1,6 @@
 .*
 !/.gitignore
-/tests/sandbox
+/tests/sandbox/*
 !/tests/sandbox/data_driven_template.robot
 !/tests/sandbox/keyword_driven_template.robot
 /output/
