@@ -13,7 +13,7 @@ ${SPEAKER_MODEL}    SP30-E0
 
 *** Test Cases ***
 Add and Remove Multiple Items to Cart
-    [Tags]  pseries     cart    fn-smoke    run
+    [Tags]  pseries     cart    fn-smoke
     Open homepage to default viewport size     ${URL}
     sleep   2
     Shop tvs and displays on desktop

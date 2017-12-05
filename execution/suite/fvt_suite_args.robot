@@ -7,8 +7,7 @@
 # Variable overrides if needed
 --variable browser:ff
 # Tags to include
---include fn-smoke
---dryrun
+--include fn-smokeANDrun
 # Path to test(s). More paths may need to be added here as new tests get created.
 tests/*/*/*/*.robot
 tests/*/*/*/*/*.robot
