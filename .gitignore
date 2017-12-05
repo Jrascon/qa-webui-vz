@@ -1,10 +1,10 @@
 .*
-!/.gitignore
 /tests/sandbox/*
-!/tests/sandbox/data_driven_template.robot
-!/tests/sandbox/keyword_driven_template.robot
 /output/
 /interface/projects/img-comp-resemblejs/app/output/images/diff_images/*.png
 /interface/projects/img-comp-resemblejs/app/output/images/test_images/*.png
 /interface/projects/img-comp-resemblejs/app/output/*.html
 /interface/projects/img-comp-resemblejs/node_modules
+!/.gitignore
+!/tests/sandbox/data_driven_template.robot
+!/tests/sandbox/keyword_driven_template.robot
