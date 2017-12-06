@@ -19,7 +19,7 @@ Click filter by screen size option       [Arguments]    ${filter_option}
     [Documentation]     Selects the specified filter option for screen size.
     ...                 ${filter_option} should be the text as it appears in the UI.
     click element   css:div.filter-container li[rel='${filter_option}'] a
-    sleep   1
+    Wait on the status overlay
 
 Verify that screen size filter is selected       [Arguments]    ${filter_option}
     [Documentation]     Verifies that the specified feature ${filter_option} has the active-filter css class applied.
@@ -29,7 +29,7 @@ Click filter by features option       [Arguments]    ${filter_option}
     [Documentation]     Selects the specified filter option under the features section.
     ...                 ${filter_option} should be the text as it appears in the UI.
     click element   css:div.filter-container li[rel^='${filter_option}'] a
-    sleep   1
+    Wait on the status overlay
 
 Verify that feature filter is selected       [Arguments]    ${filter_option}
     [Documentation]     Verifies that the specified feature ${filter_option} has the active-filter css class applied.
@@ -46,7 +46,7 @@ Click filter by price option       [Arguments]    ${filter_option}
     ...                     800-1000
     ...                     1000-
     click element   css:div[data-filter='price'] li.bottom ol > li a[onclick*='Price:${filter_option}']
-    sleep   1
+    Wait on the status overlay
 
 Verify that price filter is selected       [Arguments]    ${filter_option}
     [Documentation]     Verifies that the specified ${filter_option} has the active-filter css class applied.
@@ -56,7 +56,7 @@ Click filter by category option       [Arguments]    ${filter_option}
     [Documentation]     Selects the specified filter option under the features section.
     ...                 ${filter_option} should be the text as it appears in the UI.
     click element   css:div.filter-section.categories a[onclick*="${filter_option}"]
-    sleep   1
+    Wait on the status overlay
 
 Verify that category filter is selected       [Arguments]    ${filter_option}
     [Documentation]     Verifies that the specified ${filter_option} has the active-filter css class applied.
@@ -66,3 +66,8 @@ Verify filter category is displayed in page heading      [Arguments]     ${filte
     [Documentation]     Verifies that the specified category is displayed in the filter heading.
     element should be visible   xpath://div[contains(@class,'filter-container')]/.//div[contains(@class,'heading-section')]/.//h2[text()='${filter_category}']
 
+### Utility keywords
+Wait on the status overlay
+    [Documentation]     Waits for the status dialog that appears after clicking a filter option to render and then disappear.
+    wait until page contains element            ${STATUS_OVERLAY}
+    wait until page does not contain element    ${STATUS_OVERLAY}

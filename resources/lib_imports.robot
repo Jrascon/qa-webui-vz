@@ -11,6 +11,7 @@ Resource    ${LIBRARY_PAGES_DIR}/tvs_displays.robot
 Resource    ${LIBRARY_PAGES_DIR}/wireless_speakers.robot
 Resource    ${LIBRARY_PAGES_DIR}/shop_cart.robot
 Resource    ${LIBRARY_COMPS_DIR}/filter_pane.robot
+Resource    ${LIBRARY_COMPS_DIR}/navigation_bar.robot
 Resource    ${LIBRARY_UTIL_DIR}/open_browser.robot
 Resource    ${LIBRARY_UTIL_DIR}/page_navigation.robot
 Resource    ${LIBRARY_UTIL_DIR}/screencapture.robot

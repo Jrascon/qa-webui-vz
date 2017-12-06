@@ -33,8 +33,8 @@ ${FILTER_CAT_6}     All TVs & Displays
 @{CATEGORY_LIST}=    ${FILTER_CAT_1}     ${FILTER_CAT_2}     ${FILTER_CAT_3}     ${FILTER_CAT_4}     ${FILTER_CAT_5}     ${FILTER_CAT_6}
 
 *** Test Cases ***
-Filter product by size on desktop viewport
-    [Tags]  fn-smoke    desktop-viewport    run
+Filter product by size feature price and category on desktop viewport
+    [Tags]  fn-smoke    desktop-viewport
     :FOR    ${option}   IN  @{SIZE_LIST}
     \   Click filter by screen size option   ${option}
     \   sleep   2
@@ -42,8 +42,6 @@ Filter product by size on desktop viewport
     \   Click filter by screen size option   ${option}
     \   sleep  2
 
-Filter product by feature on desktop viewport
-    [Tags]  fn-smoke    desktop-viewport
     :FOR    ${option}   IN  @{FEATURE_LIST}
     \   Click filter by features option    ${option}
     \   sleep   2
@@ -51,8 +49,6 @@ Filter product by feature on desktop viewport
     \   Click filter by features option    ${option}
     \   sleep   2
 
-Filter product by price on desktop viewport
-    [Tags]  fn-smoke    desktop-viewport
     :FOR    ${option}   IN  @{PRICE_LIST}
     \   Click filter by price option    ${option}
     \   sleep   2
@@ -60,8 +56,6 @@ Filter product by price on desktop viewport
     \   Click filter by price option    ${option}
     \   sleep   2
 
-Filter product by category on desktop viewport
-    [Tags]  fn-smoke    desktop-viewport
     :FOR    ${option}   IN  @{CATEGORY_LIST}
     \   Click filter by category option     ${option}
     \   sleep   2

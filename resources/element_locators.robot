@@ -2,7 +2,10 @@
 Documentation  Resource file to store project specific xpaths for DOM elements.
 
 *** Variables ***
-### Pop-ups
+### Site-wide
+${STATUS_OVERLAY}       css:div.amshopby-overlay div#search-ajax-loader
+
+### General
 ${NEWSLETTER_CLOSE}     xpath://a[contains(@class,'newsletter-popup')]
 
 ### Sign-in

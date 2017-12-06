@@ -33,7 +33,7 @@ ${FILTER_CAT_6}     All TVs & Displays
 @{CATEGORY_LIST}=    ${FILTER_CAT_1}     ${FILTER_CAT_2}     ${FILTER_CAT_3}     ${FILTER_CAT_4}     ${FILTER_CAT_5}     ${FILTER_CAT_6}
 
 *** Test Cases ***
-Filter product by size on mobile viewport
+Filter product by size feature price and category on mobile viewport
     [Tags]  fn-smoke    mobile-viewport
     :FOR    ${option}   IN  @{SIZE_LIST}
     \   sleep   1
@@ -44,8 +44,6 @@ Filter product by size on mobile viewport
     \   Click clear all filter button on mobile layout
     \   sleep   2
 
-Filter product by feature on mobile viewport
-    [Tags]  fn-smoke    mobile-viewport
     :FOR    ${option}   IN  @{FEATURE_LIST}
     \   sleep   1
     \   Click filter button on mobile layout
@@ -55,8 +53,6 @@ Filter product by feature on mobile viewport
     \   Click clear all filter button on mobile layout
     \   sleep   2
 
-Filter product by price mobile viewport
-    [Tags]  fn-smoke    mobile-viewport
     :FOR    ${option}   IN  @{PRICE_LIST}
     \   sleep   1
     \   Click filter button on mobile layout
@@ -66,8 +62,6 @@ Filter product by price mobile viewport
     \   Click clear all filter button on mobile layout
     \   sleep   2
 
-Filter product by category on mobile viewport
-    [Tags]  fn-smoke    mobile-viewport
     :FOR    ${option}   IN  @{CATEGORY_LIST}
     \   sleep   1
     \   Click filter button on mobile layout
