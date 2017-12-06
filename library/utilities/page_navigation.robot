@@ -10,11 +10,6 @@ Scroll to vertical coordinate       [Arguments]    ${y}
     [Documentation]     Executes javascript to scroll the page to the specified y-coordinate.
     execute javascript      window.scrollTo(0,${y})
 
-Scroll to bottom of page
-    [Documentation]     Executes javascript to scroll the page to the specified y-coordinate.
-    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
-    execute javascript      window.scrollTo(0,${height})
-
 Scroll to horizontal coordinate       [Arguments]     ${x}
     [Documentation]     Executes javascript to scroll the page to the specified x-coordinate.
     execute javascript      window.scrollTo(${x},0)
@@ -29,3 +24,39 @@ Click link or button and wait for other element to be visible    [Arguments]    
     click element                   ${click_element}
     sleep   2
     wait until element is visible   ${wait_element}   10
+
+
+### Scroll to predefined areas
+Scroll an eighth way down the page
+    [Documentation]     Executes javascript to scroll the page roughly 1/8 down the page length.
+    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
+    ${height}=  evaluate    ${height} // ${8}
+    execute javascript      window.scrollTo(0,${height})
+    sleep   1
+
+Scroll a quarter way down the page
+    [Documentation]     Executes javascript to scroll the page roughly 1/4 down the page length.
+    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
+    ${height}=  evaluate    ${height} // ${4}
+    execute javascript      window.scrollTo(0,${height})
+    sleep   1
+
+Scroll half way down the page
+    [Documentation]     Executes javascript to scroll the page roughly 1/2 down the page length.
+    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
+    ${height}=  evaluate    ${height} // ${2}
+    execute javascript      window.scrollTo(0,${height})
+    sleep   1
+
+Scroll three quarters way down the page
+    [Documentation]     Executes javascript to scroll the page roughly 3/4 down the page length.
+    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
+    ${height}=  evaluate    (${height} // ${4}) * ${3}
+    execute javascript      window.scrollTo(0,${height})
+    sleep   1
+
+Scroll to bottom of page
+    [Documentation]     Executes javascript to scroll the page to the bottom.
+    ${height}=  execute javascript  ${GET_BODY_SCROLL_HEIGHT}
+    execute javascript      window.scrollTo(0,${height})
+    sleep   1
