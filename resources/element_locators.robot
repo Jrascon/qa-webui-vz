@@ -6,7 +6,8 @@ Documentation  Resource file to store project specific xpaths for DOM elements.
 ${STATUS_OVERLAY}       css:div.amshopby-overlay div#search-ajax-loader
 
 ### General
-${NEWSLETTER_CLOSE}     xpath://a[contains(@class,'newsletter-popup')]
+${NEWSLETTER_CLOSE}     css:a.modal-close.newsletter-popup
+${NEWSLETTER_POPUP}     css:div.newsletter-modal__container
 
 ### Sign-in
 ${SIGN_IN_LINK}         css:span[class='utility-nav__signin-text']
