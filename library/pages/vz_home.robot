@@ -44,7 +44,10 @@ Open homepage to default viewport size     [Arguments]     ${url}
 
 Close email newsletter popup
     [Documentation]     Clicks the email newsletter sign up popop.
+    wait until element is visible   ${NEWSLETTER_CLOSE}
     click element       ${NEWSLETTER_CLOSE}
+    wait until element is not visible   ${NEWSLETTER_CLOSE}
+    wait until element is not visible   ${NEWSLETTER_POPUP}
 
 # Top banner
 Click sign in link

@@ -10,10 +10,12 @@ Resource          ${RESOURCES_DIR}/resource_imports.robot
 Click filter button on mobile layout
     [Documentation]     Clicks the filter button to expand the filter options on mobile layout.
     click element   ${FILTER_BTN_MOBILE_LAYOUT}
+    Wait on the status overlay
 
 Click clear all filter button on mobile layout
     [Documentation]     Clicks the clear all button on the mobile layout.
     click element   ${FILTER_CLR_BTN_MOBILE_LAYOUT}
+    Wait on the status overlay
 
 Click filter by screen size option       [Arguments]    ${filter_option}
     [Documentation]     Selects the specified filter option for screen size.
@@ -69,5 +71,5 @@ Verify filter category is displayed in page heading      [Arguments]     ${filte
 ### Utility keywords
 Wait on the status overlay
     [Documentation]     Waits for the status dialog that appears after clicking a filter option to render and then disappear.
-    wait until page contains element            ${STATUS_OVERLAY}
+    run keyword and ignore error    wait until page contains element            ${STATUS_OVERLAY}
     wait until page does not contain element    ${STATUS_OVERLAY}
