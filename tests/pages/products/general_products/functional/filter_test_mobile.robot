@@ -3,12 +3,12 @@ Documentation
 Resource    ${RESOURCES_DIR}/resource_imports.robot
 Resource    ${RESOURCES_DIR}/lib_imports.robot
 
-Suite Setup     Open web page in mobile viewport size  ${URL}
+Suite Setup     Open web page in mobile viewport size  ${TEST_URL}
 Suite Teardown  close browser
 
 *** Variables ***
 ${PRODUCT}          pseries
-${URL}              https://qa.viziostaging.com/${PRODUCT}.html
+${TEST_URL}         ${URL}/${PRODUCT}.html
 ${FILTER_SIZE_1}    50" - 59"
 ${FILTER_SIZE_2}    60" - 69"
 ${FILTER_SIZE_3}    70" - 79"
@@ -35,10 +35,16 @@ ${FILTER_CAT_6}     All TVs & Displays
 *** Test Cases ***
 Filter product by size feature price and category on mobile viewport
     [Tags]  fn-smoke    mobile-viewport
+
+    # Get a rough location to scroll to after opening the filter menu.
+    ${scroll_to}=   Get element top y coordinate    ${FILTER_WRAPPER_ID}
+    ${scroll_to}=   evaluate    ${scroll_to} * ${.75}
+
     :FOR    ${option}   IN  @{SIZE_LIST}
     \   sleep   1
     \   Click filter button on mobile layout
     \   sleep   1
+    \   Scroll to vertical coordinate   ${scroll_to}
     \   Click filter by screen size option   ${option}
     \   sleep   2
     \   Click clear all filter button on mobile layout
@@ -48,6 +54,7 @@ Filter product by size feature price and category on mobile viewport
     \   sleep   1
     \   Click filter button on mobile layout
     \   sleep   1
+
     \   Click filter by features option    ${option}
     \   sleep   2
     \   Click clear all filter button on mobile layout
@@ -57,6 +64,7 @@ Filter product by size feature price and category on mobile viewport
     \   sleep   1
     \   Click filter button on mobile layout
     \   sleep   1
+
     \   Click filter by price option    ${option}
     \   sleep   2
     \   Click clear all filter button on mobile layout
@@ -66,9 +74,10 @@ Filter product by size feature price and category on mobile viewport
     \   sleep   1
     \   Click filter button on mobile layout
     \   sleep   1
+
     \   Click filter by category option     ${option}
     \   sleep   2
-    \   Click clear all filter button on mobile layout
+    \   Verify filter category is displayed in page heading     ${option}
     \   sleep   2
 
 *** Keywords ***

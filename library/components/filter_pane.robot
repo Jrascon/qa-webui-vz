@@ -72,4 +72,4 @@ Verify filter category is displayed in page heading      [Arguments]     ${filte
 Wait on the status overlay
     [Documentation]     Waits for the status dialog that appears after clicking a filter option to render and then disappear.
     run keyword and ignore error    wait until page contains element            ${STATUS_OVERLAY}
-    wait until page does not contain element    ${STATUS_OVERLAY}
+    wait until page does not contain element    ${STATUS_OVERLAY}   30

@@ -55,6 +55,7 @@ ${SEARCH_RESULT_CONTAINER_PRODUCT}      css:div#search-products-list div.content
 # Note: Some filter locators may be defined in library/components/filter_pane.robot
 ${FILTER_BTN_MOBILE_LAYOUT}             css:span#filterOpen
 ${FILTER_CLR_BTN_MOBILE_LAYOUT}         css:div.actions[class*='visible'] > a
+${FILTER_WRAPPER_ID}                    filter-wrapper
 
 ### Shop
 

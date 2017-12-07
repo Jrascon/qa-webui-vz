@@ -11,6 +11,7 @@ Click search icon
     [Documentation]     Clicks the seach icon to search for a product.
     click element   ${SEARCH_ICON}
     wait until element is visible   ${SEARCH_INPUT}
+    sleep   2
 
 Input search term in textbox    [Arguments]     ${search_text}
     [Documentation]     Types ${search_text} into the global search textbox.

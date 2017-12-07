@@ -6,8 +6,9 @@
 --name Functional_Smoke_Tests
 # Variable overrides if needed
 --variable browser:ff
+--variable url:https://qa.viziostaging.com
 # Tags to include
---include fn-smokeANDrun
+--include fn-smoke
 # Path to test(s). More paths may need to be added here as new tests get created.
 tests/*/*/*/*.robot
 tests/*/*/*/*/*.robot

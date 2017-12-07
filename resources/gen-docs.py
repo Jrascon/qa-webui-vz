@@ -1,3 +1,6 @@
+# IMPORTANT: This script must be executed from the project root.
+# Run> python resources/gen-docs.py
+
 import os
 from subprocess import call
 

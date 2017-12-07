@@ -3,12 +3,12 @@ Documentation
 Resource    ${RESOURCES_DIR}/resource_imports.robot
 Resource    ${RESOURCES_DIR}/lib_imports.robot
 
-Suite Setup     Open web page in default viewport size  ${URL}
+Suite Setup     Open web page in default viewport size  ${TEST_URL}
 Suite Teardown  close browser
 
 *** Variables ***
 ${PRODUCT}          pseries
-${URL}              https://qa.viziostaging.com/${PRODUCT}.html
+${TEST_URL}         ${URL}/${PRODUCT}.html
 ${FILTER_SIZE_1}    50" - 59"
 ${FILTER_SIZE_2}    60" - 69"
 ${FILTER_SIZE_3}    70" - 79"
