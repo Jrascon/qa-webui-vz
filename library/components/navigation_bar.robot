@@ -37,9 +37,17 @@ Click shop navigation item
     click element                   ${SHOP_NAV_ITEM}
     wait until element is visible
 
-Hover over navigation item  [Arguments]     ${nav_item}
-    [Documentation]     Simuilates a mouse over event on the specified ${nav_item}
-    mouse over      ${nav_item}
+Hover over tvs/displays navigation item
+    [Documentation]     Simulates hover over the
+    mouse over      ${TV_DISPLAY_NAV_ITEM}
+
+Hover over sound bars navigation item
+    [Documentation]     Simulates hover over the
+    mouse over      ${SOUND_BARS_NAV_ITEM}
+
+Hover over wireless speakers navigation item
+    [Documentation]     Simulates hover over the
+    mouse over      ${WIRELESS_SPEAKERS_NAV_ITEM}
 
 Wait for navigation bar to load
     [Documentation]     Waits for the navigation bar items to load and be visible.

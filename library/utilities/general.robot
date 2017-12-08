@@ -29,3 +29,7 @@ Wait for locator to be visible on the page  [Arguments]     ${locator}
     [Documentation]     Calls Selenium wait for page to contain and wait for element to be visible on the passed in locator.
     wait until page contains element    ${locator}
     wait until element is visible       ${locator}
+
+Hover over element by locator  [Arguments]     ${nav_item}
+    [Documentation]     Simuilates a mouse over event on the specified ${nav_item}
+    mouse over      ${nav_item}

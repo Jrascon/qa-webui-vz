@@ -39,6 +39,8 @@ ${SMARTCAST_NAV_ITEM}           css:a[onclick*="'smartcast'"][class*="site-navig
 ${SUPPORT_NAV_ITEM}             css:a[onclick*="'support'"][class*="site-navigation"]
 ${SHOP_NAV_ITEM}                css:a[onclick*="'shop'"][class*="site-navigation"]
 
+### Navigation sub menu items
+
 ### Navigation Wait elements
 ${COMPONENT_OVERVIEW_H1}    css:h1[class*='component-overview-hero__headline']
 ${TV_DISPLAY_H1}            xpath://h1[contains(text(),'TVs / Displays')]
@@ -70,11 +72,17 @@ ${EMPTY_CART_DIV}       css:section.empty-cart
 ${SHOP_TVS_DISPLAYS_DESKTOP}        css:div.v-page a[href$='/tvs.html']
 ${SHOP_TVS_DISPLAYS_MOBILE}         css:ul.mobile-nav__subitem-list a[href$='/tvs.html']
 ${SHOP_TVS_DISPLAYS_TABLET}         css:div.mobile-nav__tablet-menu a[href$='/tvs.html']
+${COMPARE_TVS}                      css:div.component-overview-hero__buttons a[href='/tv-comparison']
+${COMPARE_TVS_HOV_SUBMENU_LINK}     css:div.component-overview-hero__buttons a[href='/tv-comparison']
+${COMPARE_TVS_CHART_DIV}            css:div#compare-chart-display-overview div.compare-chart-slider-spacer
 
 ###### Sound Bars
-${SHOP_SOUND_BARS_DESKTOP}      css:div.v-page a[onclick*='shop sound bars']
-${SHOP_SOUND_BARS_MOBILE}       css:ul.mobile-nav__subitem-list a[onclick*='shop sound bars']
-${SHOP_SOUND_BARS_TABLET}       css:div.mobile-nav__tablet-menu a[onclick*='shop sound bars']
+${SHOP_SOUND_BARS_DESKTOP}              css:div.v-page a[onclick*='shop sound bars']
+${SHOP_SOUND_BARS_MOBILE}               css:ul.mobile-nav__subitem-list a[onclick*='shop sound bars']
+${SHOP_SOUND_BARS_TABLET}               css:div.mobile-nav__tablet-menu a[onclick*='shop sound bars']
+${COMPARE_SOUNDBARS}                    css:div.component-overview-hero__buttons a[href='/compare/#sound-bars']
+${COMPARE_SOUNDBARS_HOV_SUBMENU_LINK}   css:ul.submenu__nav a[href='/compare/#sound-bars']
+${COMPARE_SOUNDBAR_CHART_DIV}           css:div#compare-chart-audio-breakdown div.compare-chart-slider-spacer
 
 ###### Wireless Speakers
 ${SHOP_WIRELESS_SPEAKERS_DESKTOP}      css:div.v-page a[href$='audio/multi-room.html']

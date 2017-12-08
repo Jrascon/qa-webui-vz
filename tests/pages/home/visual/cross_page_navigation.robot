@@ -13,7 +13,7 @@ Verify Navigation Hover Elements
     [Tags]  vs-smoke
     [Setup]     Open homepage to default viewport size  ${PAGE_1}
     sleep   2
-    Hover over navigation item      ${TV_DISPLAY_NAV_ITEM}
+    Hover over element by locator      ${TV_DISPLAY_NAV_ITEM}
     sleep   5
     [Teardown]  close browser
 
