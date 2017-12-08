@@ -40,3 +40,12 @@ Click shop navigation item
 Hover over navigation item  [Arguments]     ${nav_item}
     [Documentation]     Simuilates a mouse over event on the specified ${nav_item}
     mouse over      ${nav_item}
+
+Wait for navigation bar to load
+    [Documentation]     Waits for the navigation bar items to load and be visible.
+    Wait for locator to be visible on the page      ${TV_DISPLAY_NAV_ITEM}
+    Wait for locator to be visible on the page      ${SOUND_BARS_NAV_ITEM}
+    Wait for locator to be visible on the page      ${WIRELESS_SPEAKERS_NAV_ITEM}
+    Wait for locator to be visible on the page      ${SMARTCAST_NAV_ITEM}
+    Wait for locator to be visible on the page      ${SUPPORT_NAV_ITEM}
+    Wait for locator to be visible on the page      ${SHOP_NAV_ITEM}

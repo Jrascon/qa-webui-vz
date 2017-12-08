@@ -7,6 +7,7 @@ Library             SeleniumLibrary
 Library             String
 Library             Screenshot
 Library             Dialogs
+Library             ${LIBRARY_EXT_DIR}/UtilityExtLib.py
 Resource            ${RESOURCES_DIR}/var_declarations.robot
 Resource            ${RESOURCES_DIR}/element_locators.robot
 Resource            ${RESOURCES_DIR}/js_snippets.robot

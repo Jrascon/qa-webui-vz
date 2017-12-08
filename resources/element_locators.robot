@@ -30,6 +30,8 @@ ${SUBMIT_CREATE_BTN}    css:button[id='register_submit']
 ${THANKYOU_MESSAGE}     xpath://span[text()='Thank you for registering with VIZIO.']
 
 ### Navigation
+${UTILITY_NAV}      css:nav.utility-nav
+
 ${TV_DISPLAY_NAV_ITEM}          css:a[data-nav-item='tvs-displays']
 ${SOUND_BARS_NAV_ITEM}          css:a[data-nav-item='audio']
 ${WIRELESS_SPEAKERS_NAV_ITEM}   css:a[data-nav-item='discover']

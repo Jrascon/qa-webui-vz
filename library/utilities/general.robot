@@ -24,3 +24,8 @@ Get element top y coordinate    [Arguments]     ${element_id}
     ...                 This can be used to get the coordinate that will scroll to the top of the element.
     ${y-coordinate}=    execute javascript  return document.getElementById('${element_id}').getBoundingClientRect().top
     [Return]    ${y-coordinate}
+
+Wait for locator to be visible on the page  [Arguments]     ${locator}
+    [Documentation]     Calls Selenium wait for page to contain and wait for element to be visible on the passed in locator.
+    wait until page contains element    ${locator}
+    wait until element is visible       ${locator}
