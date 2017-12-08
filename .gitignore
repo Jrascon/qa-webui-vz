@@ -8,3 +8,4 @@
 !/.gitignore
 !/tests/sandbox/data_driven_template.robot
 !/tests/sandbox/keyword_driven_template.robot
+!/tests/sandbox/sandbox_test.robot
